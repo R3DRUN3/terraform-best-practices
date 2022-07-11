@@ -58,20 +58,20 @@ DynamoDB:
 
 These two entities will provide the basis for implementing a backend that will allows us to save the state of our IaC, while also preventing two or more developers from launching commands against it at the same time.
 
-Now that they have a decentalized state, we can proceed by launching the demo that we find in the `terraform-demo-with-backend` folder
-This will create for us two EC2 instances on aws and writing the changes to the terraform.tfstate file in our aws.
+Now that we have a decentalized state, we can proceed by launching the demo that can be found in the `terraform-demo-with-backend` folder.
+This will create for us two aws EC2 instances and will write changes to the `terraform.tfstate` file in our aws.
 
-Ath the end og the procedure you should see your instances in the EC2 dashboard:
+Ath the end of the procedure you should see your instances in the EC2 dashboard:
 
 <p align="left">
   <img width="1200" height="150" src="./images/tf-demo-ec2-instances.png">
 </p>
 
-At this point, if you go to your S3 Bucket, you will see that the size has incresed to make room for Terraform state:
+At this point, if you check your S3 Bucket, you will see that the size has incresed to make room for Terraform state:
 
 <p align="left">
   <img width="1200" height="430" src="./images/tf-state-s3-bucket-full.png">
 </p>
 
-Note that the best practice is to always execute Terraform scripts via an automated Build, this is the reason we you will find a github action workflow associated with this repo, this automatically execute the scripts in `terraform-demo-with-backend` on push.
+Note that the best practice is to always execute Terraform scripts via an automated build, this is the reason why you will find a github action workflow associated with this repo, this automatically execute the scripts in `terraform-demo-with-backend` on push.
 
