@@ -1,3 +1,4 @@
+# Provider Spec
 terraform {
   backend "s3" {
     bucket = "terraform-best-practice-bucket"
