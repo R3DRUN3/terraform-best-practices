@@ -1,3 +1,4 @@
+# Terraform Provisioning
 resource "aws_instance" "my-instance" {
   count = var.instance_count
   ami = var.ami_id
