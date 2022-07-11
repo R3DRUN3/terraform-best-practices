@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform-demo-with-backend'
+
+jobs:
+  Terraform:
+    name: Terraform Plan & Apply
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Terraform Init
+      uses: hashicorp/terraform-github-actions@master
+      with:
+          tf_actions_version: 1.2.4
+          tf_actions_subcommand: 'init'
+          tf_actions_working_dir: 'terraform-demo-with-backend'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Terraform Apply
+      uses: hashicorp/terraform-github-actions@master
+      with:
+         tf_actions_version: 1.2.4
+         tf_actions_subcommand: 'apply'
+         tf_actions_working_dir: 'terraform-demo-with-backend'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
