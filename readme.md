@@ -1,5 +1,6 @@
 # Terraform Best Practices
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/R3DRUN3/terraform-best-practices/actions/workflows/CI.yml/badge.svg)](https://github.com/R3DRUN3/terraform-best-practices/actions/workflows/CI.yml)
 
 Learn Terraform Best Practice 🤖 ⚙️ 🔧
 
