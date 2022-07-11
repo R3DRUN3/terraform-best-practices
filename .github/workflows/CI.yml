@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'terraform-demo-with-backend'
-
+      - 'terraform-demo-with-backend/**'
+      
 jobs:
   Terraform:
     name: Terraform Plan & Apply
