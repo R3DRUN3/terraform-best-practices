@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/R3DRUN3/terraform-best-practices/actions/workflows/CI.yml/badge.svg)](https://github.com/R3DRUN3/terraform-best-practices/actions/workflows/CI.yml)
 
-Practice Terraform Best Practice 🤖 ⚙️ 🔧
+Follow Terraform Best Practice 🤖 ⚙️ 🔧
 
 <p align="center"><img width="180" height="180" src="https://github.com/yurijserrano/Github-Profile-Readme-Logos/blob/master/cloud/terraform.png"></p>
 
