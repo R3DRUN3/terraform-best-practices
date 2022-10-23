@@ -47,14 +47,21 @@ git clone https://github.com/R3DRUN3/terraform-best-practices.git \
 Once this deployment has ended, you will find an S3 Bucket and a DynamoDB table on your aws account:
 
 S3:
-<p align="left">
-  <img width="1200" height="30" src="./images/tf-state-s3-bucket.png">
-</p>
+<div style="width: 65%; height: 65%">
+
+  ![](images/tf-state-s3-bucket.png)
+  
+</div>  
+<br/>
 
 DynamoDB:
-<p align="left">
-  <img width="1200" height="300" src="./images/tf-state-dynamodb-lock-table.png">
-</p>
+<div style="width: 65%; height: 65%">
+
+  ![](images/tf-state-dynamodb-lock-table.png)
+  
+</div>  
+<br/>
+
 
 These two entities will provide the basis for implementing a backend that will allows us to save the state of our IaC, while also preventing two or more developers from launching commands against it at the same time.
 
@@ -63,15 +70,24 @@ This will create for us two aws EC2 instances and will write changes to the `ter
 
 Ath the end of the procedure you should see your instances in the EC2 dashboard:
 
-<p align="left">
-  <img width="1200" height="150" src="./images/tf-demo-ec2-instances.png">
-</p>
+<div style="width: 65%; height: 65%">
+
+  ![](images/tf-demo-ec2-instances.png)
+  
+</div>  
+<br/>
+
 
 At this point, if you check your S3 Bucket, you will see that the size has incresed to make room for Terraform state:
 
-<p align="left">
-  <img width="1200" height="430" src="./images/tf-state-s3-bucket-full.png">
-</p>
+
+<div style="width: 65%; height: 65%">
+
+  ![](images/tf-state-s3-bucket-full.png)
+  
+</div>  
+<br/>
+
 
 Note that the best practice is to always execute Terraform scripts via an automated build, this is the reason why you will find a github action workflow associated with this repo, this automatically execute the scripts in `terraform-demo-with-backend` on push.
 
